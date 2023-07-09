@@ -7,11 +7,11 @@ export default function VideoDetails({
   views,
   date,
   onVote,
-  commentList,
+  showComments,
   toggleComments,
   comments
 }) {
-  const buttonText = commentList ? "Hide Comments" : "Show Comments";
+  const buttonText = showComments ? "Hide Comments" : "Show Comments";
 
   function handleVote(e) {
     if (e.target.value === "upvote") {
@@ -44,7 +44,7 @@ export default function VideoDetails({
       </p>
       <hr />
       <ul className="comments">
-        <CommentList comments={comments} commentList={commentList}/>
+        <CommentList comments={comments} showComments={showComments}/>
       </ul>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import Comment from "./Comment";
 
-export default function CommentList({ comments, commentList }) {
+export default function CommentList({ comments, showComments }) {
 
   const commentEl = comments.map((comment) => {
     return (
@@ -12,7 +12,7 @@ export default function CommentList({ comments, commentList }) {
   return (
     <div>
       <h2>{comments.length} Comments</h2>
-      {commentList ? commentEl : ""}
+      {showComments ? commentEl : null}
     </div>
   );
 }
