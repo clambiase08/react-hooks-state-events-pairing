@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
-export default function Comment({comment, user}) {
+export default function Comment({ comment, user }) {
   return (
     <div>
-        <h3>{user}</h3>
-        <p>{comment}</p>
+      <h3>{user}</h3>
+      <p>{comment}</p>
     </div>
-  )
+  );
 }
